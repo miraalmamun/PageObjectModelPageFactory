@@ -17,9 +17,11 @@ public class TopMenu {
 	public WebElement navigationLabel;
 	@FindBy(xpath=FBConstants.SETTINGS_LINK)
 	public WebElement settings;
+	
+	@FindBy(xpath = FBConstants.LOG_OUT)
+	public WebElement logOut;
+	
 	ExtentTest test;
-	
-	
 	WebDriver driver;
 	
 	public TopMenu(WebDriver driver,ExtentTest test){

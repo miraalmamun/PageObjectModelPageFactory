@@ -50,6 +50,8 @@ public class FBConstants {
 	public static final Object RUNMODE_COL = "Runmode";
 	public static final String TESTCASES_SHEET = "TestCases";
 
+	public static final String LOG_OUT = "//span[text()='Log Out']";
+
 	
 
 	
