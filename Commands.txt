@@ -1,0 +1,42 @@
+Git Commands
+git config
+Usage: git config --global user.name miraalmamun  
+
+Usage: git config --global user.email miraalmamun@gmail.com  
+
+This command sets the author name and email address respectively to be used with your commits.
+=====....>>>>>>>>>>>>>>>>>>
+git init
+Usage: git init [repository name]
+This command is used to start a new repository.
+$git init 
+Initialized empty Git repository 
+======================================================================
+Very Important Note: Open your working folder. Write on address bar CMD 
+and hit enter key Command Prompt will open automatically!!!!!
+
+ - git init
+  - git status
+  - git add
+  - git commit -m “…..”
+  - git remote add origin https://github.com
+  - git push -u origin master
+  - git log
+  - git --help
+   git config --global user.email "miraalmamun@gmail.com"
+   git config --global user.name "miraalmamun"
+=====================================================================
+git remote add origin https://github.com/miraalmamun/SeleniumJava.git
+>>Above line make a connection between local git and gitHub repository
+Now we need to push it to gitHub repository
+- git push -u origin master
+If you get error or rejected then use below code
+git push origin master --force
+
+$git push -u origin master --force
+
+
+
+
+
+

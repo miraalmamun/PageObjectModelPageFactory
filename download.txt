@@ -1,0 +1,45 @@
+Git
+https://git-scm.com/downloads
+Downloads and Install
+Next>Additional Icons(check both)>next>next>...>Install
+Check Launch Git Bash>Finish
+Now we are in master branch
+git --version
+git help config or git config --help
+=======================================================
+mkdir test > Create a folder test 
+cd test > 
+git init
+=======================================================
+Now go to test folder and in it create a txt file and 
+write something in it.(demo.txt)
+Go back to bash and write command 
+git status
+git add demo.txt
+git commit -m "comitting a text file"
+clear>>clear the screen
+=========================================================
+My github userName# miraalmamun
+          passWord# Mimo949658
+          miraalmamun@gmail.com
+
+Link git to github account
+git config --global user.username miraalmamun
+(Note my github username# miraalmamun)
+Now here I am linking between my own computer repository 
+to remote github repository
+git remote add origin https://github.com/miraalmamun/helloWorld.git 
+https://.............
+now local repository and remote repository can communicate
+At this point you can push local file to remote file
+or 
+
+
+
+
+
+
+
+
+
+

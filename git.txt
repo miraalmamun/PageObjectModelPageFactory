@@ -1,0 +1,1270 @@
+git push -f origin master
+git push origin master --force
+
+Git Commands
+git config
+Usage: git config --global user.name miraalmamun  
+
+Usage: git config --global user.email miraalmamun@gmail.com  
+
+This command sets the author name and email address respectively to be used with your commits.
+=====....>>>>>>>>>>>>>>>>>>
+git init
+Usage: git init [repository name]
+This command is used to start a new repository.
+$git init 
+Initialized empty Git repository 
+======================================================================
+Very Important Note: Open your working folder. Write on address bar CMD 
+and hit enter key Command Prompt will open automatically!!!!!
+
+ - git init
+  - git status
+  - git add
+  - git commit -m “…..”
+  - git remote add origin https://github.com
+  - git push -u origin master
+  - git log
+  - git --help
+   git config --global user.email "miraalmamun@gmail.com"
+   git config --global user.name "miraalmamun"   
+
+
+
+==================================================================================================
+36 minutes(One hour videos)     https://www.youtube.com/watch?v=AzfVDEBn9hw
+
+First you need to set up userName and email.
+So lets do it
+$ git config --global user.name "miraalmamun"//User name need double quotes
+$ git config --global user.email miraalmamun@gmail.com//You donot need double quotes for email
+To check configuration set correctly or not
+$git config --list
+$clear
+$pwd//Present working directory
+$mkdir Git_Demo
+mkdir: cannot create directory 'Git_Demo': File exists
+delete it
+$rm -RF Git_Demo
+Now create it again
+$mkdir Git_Demo
+Let me navigate this folder
+$cd Git_Demo/
+$clear
+$pwd
+/././
+So this is the folder. I will use this folder
+as based folder for creating all other repository
+$mkdir FirstRepo
+$cd FirstRepo/
+$pwd
+Now let me create a repository in this folder
+$git init
+Initialized empty Git repository in C:/Users/Mir/Git_Demo/FirstRepo/.git/
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/FirstRepo (master)//Look very caryfully at this line there is 
+something changed in this line. Extra word at this line (master). By default it create
+a branch called master. So it is a master branch. Later we will see how to change branch. And how to
+create a branch'
+Now let create a file here
+$touch master.txt(touch is unix command)
+Now lets open it up in notepad
+$notepad master.text
+Here notepad will open and write in it
+"This is my first file!!"
+$git status
+$git add .
+$git status
+$git commit -m "This is my First Git Commit"
+$git log
+$touch master1.txt
+$notepad master1.txt(This is my second file)
+$notepad master.txt(Making some changes to it!!)
+$git status
+$git add .
+$git status
+$git commit -m "This is my Second Commit"
+$clear
+$git log
+=========================================================
+Now lets connect the local repository to with web based
+repository/cloud based repository
+$git remote add origin https://github.com/miraalmamun/Practice.git
+Now lets check is it add correctly or not
+$git remote -v
+
+
+git remote add origin https://github.com/miraalmamun/SeleniumJava.git
+>>Above line make a connection between local git and gitHub repository
+Now we need to push it to gitHub repository
+- git push -u origin master
+If you get error or rejected then use below code
+git push origin master --force
+--------------------------------------------
+Lets push it
+for first time
+$git push -u(up stream linking) origin master
+link the master branch(my local repository) with the 
+master branch of github repository. Where it going
+to push? To the origin and origin point to the URL
+===================================================================
+git commit. The "commit" command is used to save your changes 
+to the local repository. Note that you have to 
+explicitly tell Git which changes you want to in
+clude in a commit before running the "git commit" command.
+This means that a file won't be automatically included in 
+the next commit just because it was changed.
+--------------------------------------------------------------
+git@github.com:miraalmamun/FirstRepo-.git
+SSH Configuration to create a pair of 
+SSH keys.To connect GitHub server account used 
+SSH key.I need to create a pair of private
+and public key.
+
+$ssh-keygen -t rsa -C miraalmamun@gmail.com
+Note: Using "rsa" machanism
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Mir/.ssh/id_rsa):
+Created directory '/c/Users/Mir/.ssh'.
+Enter passphrase(PassWord) (empty for no passphrase):Mimo949658
+Enter same passphrase again:Mimo949658
+Your identification has been saved in /c/Users/Mir/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Mir/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:RFPv5ZVXlCs9GiXk145tnMspLEhuRqFUG/cYg+nlwBk miraalmamun@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|        +E*+.. .+|
+|       ..B+o*. o+|
+|       .oo+..o=o=|
+|      .....o =.Xo|
+|       .So  . *.*|
+|        + . ....o|
+|         = . o + |
+|        o   . .  |
+|                 |
++----[SHA256]-----+
+--------------------------------------------------------------------------------------------------
+Now go back to GitHub Account. Go to setting>Personal setting>Click
+on SSH and GPG keys link.Now click on New SSH key link.
+Now go to your computer. Open C:\Users\Mir\.ssh folder
+and open id_rsa(with P sign) with notepad
+Copy the key and past it in Key field and hit the Add SSH key link
+If there is no error. It is good to use.
+Now for double check key is working or not
+Go to Git Bash command prompt
+$ssh -T git@github.com
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Enter passphrase for key '/c/Users/Mir/.ssh/id_rsa':
+Hi miraalmamun! You've successfully authenticated, but GitHub does not provide shell access.
+---------------------------------
+Mir@Mir-PC MINGW64 ~/Git_Demo
+For second used key what I will do is
+create a repository in the server and then
+clone the repository (In my computer or local drive)
+--------
+Now create a GitHub repository
+repository name:SecondRepo
+Description>This is my Second Repository
+that is created straight on the GitHub Server
+Initialize a README
+Hit the create a repository
+---------------------
+There is two URL for repository
+HTTPS and SSH
+--------------------------------
+$ pwd
+/c/Users/Mir/Git_Demo
+$ ls
+FirstRepo/
+$clear
+Mir@Mir-PC MINGW64 ~/Git_Demo
+$ git clone git@github.com:miraalmamun/SecondRepo.git
+Cloning into 'SecondRepo'...
+Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+Enter passphrase for key '/c/Users/Mir/.ssh/id_rsa':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects:  50% (1/2)  remote: Compressing objects: 100% (2/2)  remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+---------------------------------------
+Mir@Mir-PC MINGW64 ~/Git_Demo
+$ ls -ltr
+total 0
+drwxr-xr-x 1 Mir 197608 0 Jun 24 22:37 FirstRepo/
+drwxr-xr-x 1 Mir 197608 0 Jun 25 01:04 SecondRepo/
+------------------------------------------
+
+Mir@Mir-PC MINGW64 ~/Git_Demo
+$ cd SecondRepo/
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ ls -ltr
+total 1
+-rw-r--r-- 1 Mir 197608 90 Jun 25 01:04 README.md
+--------------------------
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ notepad second.txt
+
+This is my second file that I will push on to the server!!
+--------------------------------------
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        second.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ clear
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ git commit -m "This is my First commit for the Second Repo"
+[master 043f100] This is my First commit for the Second Repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 second.txt
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$
+--------------------
+At this time around since I clone repository from my server
+the origin already set for me I really donot need to add origin
+all that stuf.
+First case was I created local repository to my computer
+then pushing to the server repository
+Thats why I added thats time upstram.
+At this time I cloned an existing repository from
+the server. When I cloned I got the replica
+So I donot need to anything more other then 
+push the contain. 
+
+
+
+$git remote -v
+origin  git@github.com:miraalmamun/SecondRepo.git (fetch)
+origin  git@github.com:miraalmamun/SecondRepo.git (push)
+
+Mir@Mir-PC MINGW64 ~/Git_Demo/SecondRepo (master)
+$ git push origin master
+Note:$git push -u(up stream linking) origin master
+
+Enter passphrase for key '/c/Users/Mir/.ssh/id_rsa':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 356 bytes | 89.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:miraalmamun/SecondRepo.git
+   b1a76ea..043f100  master -> master
+
+ =================================================
+Lets say I have a file named as newFile.java
+and I want to delete it. How?
+Ans: $ rm -f newFile.java
+----------------------------------------------------------
+Press i to enter inline insert mode. Type the description
+ at the very top, press esc to exit insert mode, then 
+type :x! (now the cursor is at the bottom) and hit enter 
+to save and exit. After writing commit message, just 
+press Esc Button and then write :wq or :wq! and then 
+Enter to close the unix file
+
+=========================New Note From Videos===============
+
+$git diff
+$ls -a(list all the files and folder)
+
+What the developer want to do they want to add
+new feature and then merge back to the master branch
+For new feature we need a particular branch
+To create a branch
+$git branch feature1(branchName)
+To see how many branch are there
+$git branch
+How to switch one branch to another branch
+$git checkout feature1
+=====================================
+git log --oneline
+or
+git log
+-----------------------------------------
+=========Important Git and GitHub Note=============================================
+
+So first You need to check Git installation
+$ git --version
+git version 2.22.0.windows.1
+Note:Git is properly install in my computer
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept
+
+1. First we need to create a working directory
+So I created a Folder on Desktop as GitPractice
+then I change working director below the commands
+Mir@Mir-PC MINGW64 ~/Desktop
+$ mkdir COFEE
+
+Mir@Mir-PC MINGW64 ~/Desktop
+$ cd COFEE
+Side Note: Make sure> Got folder> View> File name extensions and
+Hidden items are marked
+Now I want to make this "COFEE" folder as Git
+Repository Folder
+$git init
+Now my "COFEE" Folder will work as git repository
+As soon as I execute this $git init command, a folder
+will be created named as (.git) in my COFEE
+folder. Now whatever I do inside COFEE folder
+git will track it.
+
+Now we need to set up userName and userEmail to identified who
+is working. Since we are worked more then one developer, we should
+set up userName and userEmail. It is the idenfication of git. We
+can set userName and user.email in a two way 1. Global and 2. Local
+Global means as many as you create git repository every repository
+will use same user.name and user.email
+Below global way
+$git config --global user.email "miraalmamun@gmail.com"
+$git config --global user.name "miraalmamun" 
+
+This command sets the author name and email address respectively to be 
+used with your commits.
+
+Now local way below: It is for indivitual git repository
+$git config  user.name "miraalmamun"
+$git config  user.email "miraalmamun@gmail.com"
+
+To check configuration set correctly or not
+$git config --list
+$clear
+$pwd//Present working directory
+
+Lets now create two text file 1.cold.txt and 2.hot.txt
+$touch cold.txt
+$touch hot.txt
+$git status
+
+Now we need to take this two file to stage area
+In order to do this
+$ add cold.txt
+$git status
+Now my repository able to track the cold.txt file
+but still not able to track the hot.txt file because
+it is not stage area. To add all file at a time in a 
+stage area there is two command
+$git add .
+or
+$git add --all
+Now all files are track by git repository
+So now we added this two file in stage area to save it 
+to repository. Lets save it to repository
+$git commit -m ""
+
+There is other way we can commit
+$git commit
+Hit the "i" key
+write "2 two text file added"
+Hit "Esc" key
+:x (Hit Enter key) for exit from new window
+$git status
+$touch chocolate.txt
+$git add .
+$git commit -m "chocolate added"
+Now lets indroduce the "log" command
+By log command you can see commit status
+how many commit you did. Every commit
+has a uniq hash number. With this number you can
+do a lots of think. Later I will explain it.
+There are two command for it
+1.git log
+2.git log --oneline
+$notepad cold.txt
+write in it "Ice cube added"
+save and closed it
+$git status
+$git add .
+$git commit -m "Ice cube added"
+$git log --oneline 
+
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ touch cold.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ touch hot.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        cold.txt
+        hot.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git commit -m "2 text file added"
+[master (root-commit) bc1593c] 2 text file added
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cold.txt
+ create mode 100644 hot.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log
+commit bc1593cee7f529ecc25ccc92699860910d78f819 (HEAD -> master)
+Author: miraalmamun <miraalmamun@gmail.com>
+Date:   Wed Jun 26 02:41:50 2019 -0400
+
+    2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+bc1593c (HEAD -> master) 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ touch chocolate.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   chocolate.txt
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git commit -m "chocolate added"
+[master 96d986e] chocolate added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chocolate.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log
+commit 96d986ed53f16241a7de3284af62c99afe0c1a42 (HEAD -> master)
+Author: miraalmamun <miraalmamun@gmail.com>
+Date:   Wed Jun 26 02:44:22 2019 -0400
+
+    chocolate added
+
+commit bc1593cee7f529ecc25ccc92699860910d78f819
+Author: miraalmamun <miraalmamun@gmail.com>
+Date:   Wed Jun 26 02:41:50 2019 -0400
+
+    2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+96d986e (HEAD -> master) chocolate added
+bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ notepad cold.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   cold.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git commit -m "Ice cube added"
+[master dc4ddca] Ice cube added
+ 1 file changed, 1 insertion(+)
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+dc4ddca (HEAD -> master) Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+
+Lets assume I made a mistake that wrongfully
+I added "Ice cube added". Now I want to go
+back "Chocolate added" stage. I mean I wrote
+in cold.txt file "Ice cube added". I donot want
+this line of code.
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+dc4ddca (HEAD -> master) Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git checkout 96d986e
+Note: checking out '96d986e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 96d986e chocolate added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE ((96d986e...))
+$
+
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE ((96d986e...))
+$ git log --oneline
+96d986e (HEAD) chocolate added
+bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE ((96d986e...))
+$ git checkout bc1593c
+Previous HEAD position was 96d986e chocolate added
+HEAD is now at bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE ((bc1593c...))
+$
+Here we go back two steps
+Now COFEE Folder look like
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE ((bc1593c...))
+$ git checkout master
+Previous HEAD position was bc1593c 2 text file added
+Switched to branch 'master'
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$
+==============
+Above command execute and watch your working
+directory. You can see the change
+
+$notepad chocolate.txt
+write in it "Some chocolate added"
+save and exit
+$git status
+$git diff
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+dc4ddca (HEAD -> master) Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+Now I want to see what was changed on
+commit "chocolate added"
+$git show 96d986e
+---------------------------------------------
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+dc4ddca (HEAD -> master) Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ notepad chocolate.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   chocolate.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git diff
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git checkout chocolate.txt
+Updated 0 paths from the index
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   chocolate.txt
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git reset HEAD chocolate.txt
+Unstaged changes after reset:
+M       chocolate.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   chocolate.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git diff
+diff --git a/chocolate.txt b/chocolate.txt
+index e69de29..2c6bd1e 100644
+--- a/chocolate.txt
++++ b/chocolate.txt
+@@ -0,0 +1 @@
++Some chocolate added
+\ No newline at end of file
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+dc4ddca (HEAD -> master) Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git show 96d986e
+commit 96d986ed53f16241a7de3284af62c99afe0c1a42
+Author: miraalmamun <miraalmamun@gmail.com>
+Date:   Wed Jun 26 02:44:22 2019 -0400
+
+    chocolate added
+
+diff --git a/chocolate.txt b/chocolate.txt
+new file mode 100644
+index 0000000..e69de29
+
+git add .
+git commit -m "some chocolate added"
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git commit -m "some chocolate added"
+[master 66aef44] some chocolate added
+ 1 file changed, 1 insertion(+)
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+66aef44 (HEAD -> master) some chocolate added
+dc4ddca Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ notepad chocolate.txt
+write in it "dark chocolate added"
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git commit -m "dark chocolate added"
+[master f55164f] dark chocolate added
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+https://www.youtube.com/watch?v=4KdGgGsIDeA
+105hour
+=====================================================
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git log --oneline
+f55164f (HEAD -> master) dark chocolate added
+66aef44 some chocolate added
+dc4ddca Ice cube added
+96d986e chocolate added
+bc1593c 2 text file added
+>>
+Here I want to see difference between "some chocolate added"
+and "dark chocolate added"
+$git diff 66aef44 f55164f
+
+$notepad chocolate.txt
+"more chocolate added"
+save and exit
+
+$git status
+$git diff
+$git add .
+$git diff
+At this point there is nothing because at staged area
+git diff does not work
+$git diff --staged
+Now you can see the difference
+---------------------------------
+I have three files here
+1.chocolate.txt
+2.cold.txt
+3.hot.txt
+--Now I want to delete a file from here
+$git rm hot.txt
+$git status
+$git reset HEAD hot.txt
+Parmanently delete it from repository
+=====================================
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   chocolate.txt
+        deleted:    hot.txt
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git reset HEAD hit.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   chocolate.txt
+        deleted:    hot.txt
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ ls
+chocolate.txt  cold.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git reset HEAD hot.txt
+Unstaged changes after reset:
+D       hot.txt
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   chocolate.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    hot.txt
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/COFEE (master)
+$ git commit -m "hot.txt deleted"
+[master 9726642] hot.txt deleted
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+============Now Connect Local Repository
+with Remote Repository==================
+......>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Lets create a repository in github
+I created a repository name as coffee
+I want to upload or push my local repository
+to this repository.
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:miraalmamun/coffee.git
+git push -u origin master
+
+===================================================
+Lets create a new folder on Desktop named as 
+"git tuto" and open it by Git Bash
+$git init
+$touch student.txt
+$git add .
+$git commit -m "commit"
+
+SSH Configuration to create a pair of 
+SSH keys.To connect GitHub server account used 
+SSH key.I need to create a pair of private
+and public key.
+
+$ssh-keygen -t rsa -b 4096 -C "miraalmamun@gmail.com"
+$ssh-keygen -t rsa -C miraalmamun@gmail.com
+Note: Using "rsa" machanism
+-----------------------------------------------------
+$ ssh-keygen -t rsa -b 4096 -C "miraalmamun@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Mir/.ssh/id_rsa): git_keys
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in git_keys.
+Your public key has been saved in git_keys.pub.
+The key fingerprint is:
+SHA256:GxN2kRpMbJV3iBvl8V/oYSEO+acbPkS6mZeTATzidWw miraalmamun@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|       +..+*+..  |
+|        = *=o+.o |
+|       .o+.*o.= .|
+|       .oo* Eo.o.|
+|       .So B o. .|
+|        .+. =    |
+|        .  * *   |
+|          + O    |
+|           . o   |
++----[SHA256]-----+
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ eval $(ssh-agent -s)
+Agent pid 1919
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /c/Users/Mir/.ssh/id_rsa:
+Identity added: /c/Users/Mir/.ssh/id_rsa (miraalmamun@gmail.com)
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ clip < ~/.ssh/id_rsa.pub(This line copy the key password)
+
+Now go back to GitHub Account. Go to setting>Personal setting>Click
+on SSH and GPG keys link.Now click on New SSH key link.Past it. Done!!
+
+
+
+================================================
+git clone https//github.com/shakilahmededu/git-tuto.git (optional name you like othe then git-tuto)
+In working directory
+==================================================
+Now lets go back to github and do some change on it
+(git@github.com:miraalmamun/git-tuto.git)
+Lets do some edit on student.txt file
+"first line added"
+Commit changes
+"line added"
+Finally hit on "Commit changes" link or button
+Now go back to local repository at your computer
+and open the student.txt file. You can see here, there is
+nothing change here. student.txt file are empty because 
+we did not add anything here.
+My local repository or computer does not know if there
+is any commit happpened on github. If you want to inform
+your local repository is there any changed happened on 
+github then you need to use "fetch" command.
+
+
+===============================FETCH!!!!!!!!!!===============================
+$git fetch
+
+This command will let your computer know how many commit
+happen on github repository. This command communicate
+between local repository and github repositoryza
+
+Now use "status" command to know the status on github
+
+$ git fetch
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From github.com:miraalmamun/git-tuto
+   97ff3f3..b56e4b2  master     -> origin/master
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git_keys
+        git_keys.pub
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Look above statement "On branch master
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+"
+So in order to update your local branch
+$git pull
+
+
+After this command if you open your local student.txt file, you can see whatever
+you did on remote repository(github) added to the local student.txt file.
+=========================================================================
+Now we will learn branching. How to create a branch
+
+
+Lets create a branch
+
+$git branch idbranch(name of the branch)
+
+Now question how many branch we have in this repository
+
+$git branch
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ git branch idbranch
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ git branch
+  idbranch
+* master
+
+Look very carefully the result showing two branch 
+1.idbranch
+2.master with * singn in front on it
+This means we are now on master branch
+
+
+Now how we can go master branch to idbranch or swicth around
+
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ git checkout idbranch
+Switched to branch 'idbranch'
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (idbranch)
+$
+
+
+At the above command "$ git checkout idbranch" we are switching here
+master to idbranch
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+          to
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (idbranch)
+
+
+There is another way you can create a branch and sametime you can
+get in branch
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (idbranch)
+$ git checkout -b home-branch
+Switched to a new branch 'home-branch'
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (home-branch)
+
+Explain at the above command "$ git checkout -b home-branch"
+I am creating a branch name as home-branch and same time
+I am in it.
+
+
+$ git add .
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (home-branch)
+$ git commit -m "home added"
+===================================
+$ git branch
+* home-branch
+  idbranch
+  master
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (home-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+
+Now go back local folder and see the changes
+It is now showing only "student.txt" because
+we are now on master branch.
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+
+Now I want to bring everything from home-branch
+to master branch. Other words I want to merge between
+master branch and home-branch.
+
+$ git merge home-branch
+ Now go back And see the difference in "git tuto" folder
+
+======Here I want to delete a branch=========================
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ git branch
+  home-branch
+  idbranch
+* master
+
+Mir@Mir-PC MINGW64 ~/Desktop/git tuto (master)
+$ git branch -D idbranch
+Deleted branch idbranch (was b56e4b2).
+======================================-------...>>>>>>>>>>>>>>>>>>>>>>
+==================================================================================
+$git stash
+
+============================================
+clean
+==============================================
+If you want to clean everything from Untracked files: 
+then you need to use
+$git clean -f -n
+
+First this command let you which files going to delete permanatly. IF you
+sure you want to delete all this file then use
+
+$git clean -f >> for deleting Untracked files.
+
+
+how to add github project to eclipse
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
