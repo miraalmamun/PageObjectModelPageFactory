@@ -180,11 +180,12 @@
 		<!-- =============================================End of Gson================================ -->
 		<!-- The Apache HttpClient library allows to handling HTTP requests. To 
 			use this library add a dependency to your Maven -->
-		<dependency>
+			<!-- <dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>${httpclient.version}</version>
-		</dependency>
+		</dependency> -->
+		
 		<!-- ===============================End of HttpClient======================================= -->
 		<!--Guava is an open source, Java-based library and contains many core 
 			libraries of Google, which are being used in many of their projects. It facilitates 
