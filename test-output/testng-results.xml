@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="29831" started-at="2019-08-14T09:26:03Z" finished-at="2019-08-14T09:26:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="29831" started-at="2019-08-14T09:26:03Z" finished-at="2019-08-14T09:26:33Z">
+      <class name="com.qtpselenium.facebook.pom.testcases.ChangePasswordTest">
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.qtpselenium.facebook.pom.testcases.ChangePasswordTest@a3d8174]" name="changePasswordTest" duration-ms="26941" started-at="2019-08-14T09:26:04Z" data-provider="getData" finished-at="2019-08-14T09:26:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{NewPassword=Mimo94965812345, Username=miraalmamun@gmail.com, OldPassword=Mimo9496581234, ExpectedResult=Success, Runmode=Y, Browser=Mozila}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePasswordTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.qtpselenium.facebook.pom.testcases.ChangePasswordTest@a3d8174]" name="quit" is-config="true" duration-ms="2851" started-at="2019-08-14T09:26:30Z" finished-at="2019-08-14T09:26:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.qtpselenium.facebook.pom.testcases.ChangePasswordTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
